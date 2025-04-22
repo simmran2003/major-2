@@ -25,4 +25,7 @@ app.use("/api/interviews", require("./routes/InterviewRoute"));
 app.use("/api/questions", require("./routes/QuestionsRoute"));
 
 const PORT = process.env.PORT || 5000;
+app.get('/', (req, res) => {
+  res.json("Hello from API.")
+}) 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
